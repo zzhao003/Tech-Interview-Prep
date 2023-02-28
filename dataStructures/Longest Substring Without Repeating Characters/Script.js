@@ -33,3 +33,8 @@ var lengthOfLongestSubstring = function (s) {
 };
 
 console.log(lengthOfLongestSubstring("dvdf"));
+
+//sliding window method
+// travese the right pointer and store el in a set and update max length, until duplicate is found
+// then increment the left pointer and continue treversing the right pointer and update max length
+//return max value
