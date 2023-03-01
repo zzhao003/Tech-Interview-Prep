@@ -35,7 +35,7 @@ var isPalindrome = function (s) {
 
 // console.log(isPalindrome("race a car"));
 // ABOVE SOLOTION DOES NOT WORK WHEN THERE IS NUMBERS********************
-
+// TWO Pointers method
 var isPalindrome2 = function (s) {
   const alphArr = "0123456789abcdefghijklmnopqrstuvwxyz".split("");
 
