@@ -13,5 +13,23 @@ const fn = (arr) => {
   return maxP;
 };
 
-const testCase = [7, 1, 5, 3, 6, 4];
-console.log(fn(testCase));
+// const testCase = [7, 1, 5, 3, 6, 4];
+// console.log(fn(testCase));
+
+//------------------------------------ nested for loop
+const fn2 = (arr) => {
+  let diff = 0;
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      const temp = arr[j] - arr[i];
+
+      if (temp > diff) {
+        diff = temp;
+      }
+    }
+  }
+  return diff;
+};
+
+const testCase = [];
+console.log(fn2(testCase));

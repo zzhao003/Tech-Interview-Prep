@@ -4,9 +4,10 @@
 
 function threeSum(arr) {
   const sortedArr = arr.sort((a, b) => a - b);
+
   const res = [];
 
-  for (let i = 0; i < sortedArr.length - 3; i++) {
+  for (let i = 0; i < sortedArr.length; i++) {
     if (i > 0 && sortedArr[i] === sortedArr[i - 1]) {
       continue;
     }
@@ -14,6 +15,7 @@ function threeSum(arr) {
     let r = sortedArr.length - 1;
     while (l < r) {
       let sum = sortedArr[i] + sortedArr[l] + sortedArr[r];
+      console.log(sum);
       if (sum > 0) {
         r--;
       } else if (sum < 0) {
@@ -30,4 +32,4 @@ function threeSum(arr) {
   return res;
 }
 
-console.log(threeSum([-1, 0, 1, 2, -1, -4]));
+console.log(threeSum([0, 0, 0]));
