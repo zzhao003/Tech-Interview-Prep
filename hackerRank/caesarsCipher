@@ -1,0 +1,26 @@
+def caesarCipher(s, k):
+    # Write your code here
+    a = ord('a')
+    z = ord('z')
+    aa = ord('A')
+    zz = ord('Z')
+    res = ''
+    print(aa,zz)
+    for i in range(len(s)):
+        print(ord(s[i]))
+        if a<= ord(s[i]) <=z:
+            if ord(s[i])+k%26 > z:
+                res += chr(ord(s[i])+k%26-26)
+            else:
+                res += chr(ord(s[i])+k)
+        elif aa<= ord(s[i]) <=zz:
+            if ord(s[i])+k%26 > zz:
+                res += chr(ord(s[i])+k%26-26)
+            else:
+                res += chr(ord(s[i])+k)
+        else:
+            res += s[i]
+    return res
+
+# print(caesarCipher('Ciphering.', 26))
+print(67+27%26)
