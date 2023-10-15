@@ -6,11 +6,20 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        # can store nodes in a hashmap/set, return if duplicate if found
-        myset = set()
-        while head:
-            if head in myset:
+        # store nodes in a hashmap/set, return if duplicate if found
+        # myset = set()
+        # while head:
+        #     if head in myset:
+        #         return True
+        #     myset.add(head)
+        #     head = head.next
+        # return False
+
+        # TWO POINTERS
+        slow, fast = head, head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if fast == slow:
                 return True
-            myset.add(head)
-            head = head.next
         return False
