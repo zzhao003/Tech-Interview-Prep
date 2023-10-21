@@ -16,14 +16,14 @@ class Solution:
         # self.invertTree(root.right)
         # return root
         if root == None: return root
-        stack = [root]
-        while stack:
-            cur = stack.pop()
+        que = deque([root])
+        while que:
+            cur = que.popleft()
             if  cur.left or cur.right:
                 temp = cur.left
                 cur.left = cur.right
                 cur.right = temp
 
-            if cur.left: stack.append(cur.left)
-            if cur.right: stack.append(cur.right)
+            if cur.left: que.append(cur.left)
+            if cur.right: que.append(cur.right)
         return root
